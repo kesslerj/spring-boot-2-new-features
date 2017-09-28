@@ -41,7 +41,7 @@ Simple hint for taking a look at the new mechanism via debugging in an IDE:
 - Run a build, then copy `META-INF/spring.components` from the jar file to `src/main/resources/META-INF/spring.components`
 - Breakpoints in 
   * `CandidateComponentsIndexLoader.loadIndex(..)` where the index file is loaded
-  * `ClassPathScanningCandidateComponentProvider.findCandidateComponents(..)` where the index is used ix exists, otherwise class path is scanned
+  * `ClassPathScanningCandidateComponentProvider.findCandidateComponents(..)` where the index is used if exists, otherwise class path is scanned
 
 To see that it works for JPA related candidates, checkout the branch `jpa` and run a build.
 
