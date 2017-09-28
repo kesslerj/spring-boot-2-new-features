@@ -1,8 +1,0 @@
-#
-#Thu Sep 28 19:32:55 CEST 2017
-de.acando.jk.bootdemo.Person=javax.persistence.Entity
-de.acando.jk.bootdemo.PersonController=org.springframework.stereotype.Component
-de.acando.jk.bootdemo.PersonRepository=org.springframework.data.repository.Repository
-de.acando.jk.bootdemo.BootDemoApplication=org.springframework.stereotype.Component
-de.acando.jk.bootdemo.newfeaturesin2.rest.json.DataRowController=org.springframework.stereotype.Component
-de.acando.jk.bootdemo.newfeaturesin2.nullable.TestController=org.springframework.stereotype.Component
