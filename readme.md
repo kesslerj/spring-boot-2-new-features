@@ -2,7 +2,7 @@
 
 This project covers several changes in spring-boot 2.0.0 which are worth knowing. For a complete list of changes please take a look at the [official release notes](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.0-Release-Notes).
 
-Currently this project contains changes from the latest released milestone 2.0.0M3.
+Currently this project contains changes from the latest released milestone 2.0.0M4.
 
 __Code structure__<br/>
 This repository contains two spring-boot-projects:
@@ -55,10 +55,10 @@ To see that it works for JPA related candidates, checkout the branch `jpa` and r
 # Features from Spring Boot 2.0.0
 
 ## Actuator
-- All managing endpoints are moved to `/application`, for example the info endpoint is now available under `/application/info`.
+- All managing endpoints are moved to `/application`, for example the info endpoint is now available under `/application/info`. Default actuator endpoint can be changed with property `management.context-path`.
 - Autoconfig endpoint contains autoconfigurations whithout conditions (@Conditional... annotations).
+- Creating a custom actuator endpoint is much more easier now. Check out class `PersonActuatorEndpoint` in package `newfeaturesin2.actuator`. 
 
-Can be changed with property `management.context-path`.
 
 ## @ConfigurationProperties needs @Validated
 
