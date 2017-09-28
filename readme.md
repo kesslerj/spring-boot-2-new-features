@@ -57,7 +57,8 @@ To see that it works for JPA related candidates, checkout the branch `jpa` and r
 ## Actuator
 - All managing endpoints are moved to `/application`, for example the info endpoint is now available under `/application/info`. Default actuator endpoint can be changed with property `management.context-path`.
 - Autoconfig endpoint contains autoconfigurations whithout conditions (@Conditional... annotations).
-- Creating a custom actuator endpoint is much more easier now. Check out class `PersonActuatorEndpoint` in package `newfeaturesin2.actuator`. 
+- Creating a custom actuator endpoint is much more easier now. Check out class `PersonActuatorEndpoint` in package `newfeaturesin2.actuator`. <br/>
+TODO: Implementation in spring-boot 1.x is still missing
 
 
 ## @ConfigurationProperties needs @Validated
