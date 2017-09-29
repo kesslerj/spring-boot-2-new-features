@@ -9,6 +9,9 @@ This repository contains two spring-boot-projects:
 - `spring-boot-2-demo` which shows the new features, see below.
 - `spring-boot-1-demo` which is meant to show the old behaviour
 
+TODO:
+ - Boot: spring security, small config added to code, no documentation here
+
 # Features inherited from Spring Framework 5.0.0
 
 ## @Nullable and @NonNullApi
