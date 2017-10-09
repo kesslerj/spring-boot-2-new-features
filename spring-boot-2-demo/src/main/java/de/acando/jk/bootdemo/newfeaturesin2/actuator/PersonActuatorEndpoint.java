@@ -5,12 +5,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import org.springframework.boot.actuate.endpoint.DefaultEnablement;
 import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
 import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
 import org.springframework.boot.actuate.endpoint.annotation.Selector;
 import org.springframework.boot.actuate.endpoint.annotation.WriteOperation;
 
-@Endpoint(id = "person")
+@Endpoint(id = "person", defaultEnablement = DefaultEnablement.ENABLED)
 public class PersonActuatorEndpoint {
 
 	private final Map<String, Person> people = new ConcurrentHashMap<>();

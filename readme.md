@@ -5,12 +5,11 @@ This project covers several changes in spring-boot 2.0.0 which are worth knowing
 Currently this project contains changes from the latest released milestone 2.0.0M4.
 
 __Code structure__<br/>
-This repository contains two spring-boot-projects:
+This repository contains three spring-boot-projects:
 - `spring-boot-2-demo` which shows the new features, see below.
-- `spring-boot-1-demo` which is meant to show the old behaviour
+- `spring-boot-1.5-demo` which is meant to show the behaviour in 1.5 and compare to 2.0
+- `spring-boot-1.4-demo` for comparing actuator behaviour between 1.4, 1.5 and 2.0
 
-TODO:
- - Boot: spring security, small config added to code, no documentation here
 
 # Features inherited from Spring Framework 5.0.0
 
@@ -58,8 +57,13 @@ To see that it works for JPA related candidates, checkout the branch `jpa` and r
 # Features from Spring Boot 2.0.0
 
 ## Actuator
+- Security management of the actuator endpoints has been refactored with 2.0. 
+  * Now endpoints can only be enabled or disabled.
+  * Only `/info` and `/status` are enabled per default. 
+  * With adding spring-boot-starter-security and NO custom security configuration, all enabled actuator endpoints are available without authentification.
+  * Having a custom security configuration, security of actuator endpoints must be configured in there. No defaults will be used then.
 - All managing endpoints are moved to `/application`, for example the info endpoint is now available under `/application/info`. Default actuator endpoint can be changed with property `management.context-path`.
-- Autoconfig endpoint contains autoconfigurations whithout conditions (@Conditional... annotations).
+- Autoconfig endpoint `/autoconfig` contains autoconfigurations whithout conditions (@Conditional... annotations).
 - Creating a custom actuator endpoint is much more easier now. Check out class `PersonActuatorEndpoint` in package `newfeaturesin2.actuator`. <br/>
 TODO: Implementation in spring-boot 1.x is still missing
 
